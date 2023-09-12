@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto curso</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body id="body">
+    <div class="container">
+      <div class="profile">
+        <img src="assets/img/avatar.png" id="avatar" />
+        <p>@MuzanSola</p>
+      </div>
+      <div class="container-switch">
+        <label for="darkToggle" class="switch">
+          <input type="checkbox" id="darkToggle" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="links" id="linkBtn">
+        <ul>
+          <li>
+            <a href="">Conheça Demon Slayer</a>
+          </li>
+          <li>
+            <a href="">Caçadores de Oni</a>
+          </li>
+          <li>
+            <a href="">Onis</a>
+          </li>
+          <li>
+            <a href="">Respirações</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social-links">
+        <a class="icon-social" href="">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a class="icon-social" href="">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a class="icon-social" href="">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a class="icon-social" href="">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <footer class="rodape">
+        <p class="rodapeParagrafo">
+          Feito com ♥ pelo
+          <a href="#" class="rodapeLink">Muzan</a>
+        </p>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+      let darkToggle = document.querySelector("input")
+
+      darkToggle.addEventListener("change", (e) => {
+        let body = document.querySelector("body")
+        let social = document.querySelector(".social-links")
+        let link = document.querySelector(".links")
+        let paragrafo = document.querySelector("p")
+        let rodapeParagrafo = document.querySelector(".rodapeParagrafo")
+        let rodapeLink = document.querySelector(".rodapeLink")
+
+        if (e.target.checked) {
+          body.classList.add("light")
+          $("#avatar").removeAttr("src")
+          $("#avatar").attr("src", "assets/img/avatar-light.png")
+          link.classList.add("light")
+          social.classList.add("light")
+          paragrafo.classList.add("light")
+          rodapeParagrafo.classList.add("light")
+          rodapeLink.classList.add("light")
+        } else {
+          body.classList.remove("light")
+          $("#avatar").removeAttr("src")
+          $("#avatar").attr("src", "assets/img/avatar.png")
+          link.classList.remove("light")
+          social.classList.remove("light")
+          paragrafo.classList.remove("light")
+          rodapeParagrafo.classList.remove("light")
+          rodapeLink.classList.remove("light")
+        }
+      })
+    </script>
+  </body>
+</html>
