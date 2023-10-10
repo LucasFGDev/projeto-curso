@@ -66,37 +66,5 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
     <script src="assets/js/script.js"></script>
-    <script>
-      let darkToggle = document.querySelector("input")
-
-      darkToggle.addEventListener("change", (e) => {
-        let body = document.querySelector("body")
-        let social = document.querySelector(".social-links")
-        let link = document.querySelector(".links")
-        let paragrafo = document.querySelector("p")
-        let rodapeParagrafo = document.querySelector(".rodapeParagrafo")
-        let rodapeLink = document.querySelector(".rodapeLink")
-
-        if (e.target.checked) {
-          body.classList.add("light")
-          $("#avatar").removeAttr("src")
-          $("#avatar").attr("src", "assets/img/avatar-light.png")
-          link.classList.add("light")
-          social.classList.add("light")
-          paragrafo.classList.add("light")
-          rodapeParagrafo.classList.add("light")
-          rodapeLink.classList.add("light")
-        } else {
-          body.classList.remove("light")
-          $("#avatar").removeAttr("src")
-          $("#avatar").attr("src", "assets/img/avatar.png")
-          link.classList.remove("light")
-          social.classList.remove("light")
-          paragrafo.classList.remove("light")
-          rodapeParagrafo.classList.remove("light")
-          rodapeLink.classList.remove("light")
-        }
-      })
-    </script>
   </body>
 </html>
